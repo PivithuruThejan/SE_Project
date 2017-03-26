@@ -6,6 +6,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    public function is_admin(){
+        if($this->admin){
+            return true;
+        }
+        return false;
+    }
     /**
      * The attributes that are mass assignable.
      *

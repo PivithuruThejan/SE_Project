@@ -14,4 +14,38 @@
         </div>
     </div>
 </div>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <div class="btn-group" role="group">
+        <a href="{{ url('/register') }}">
+        <button  type="button" class="btn btn-default">Create A Question Bank</button>
+        </a>
+    </div>
+    <div class="btn-group" role="group">
+        <a href="{{ url('/login') }}">
+        <button type="button" class="btn btn-default">Log In To Question Bank</button>
+        </a>
+    </div>
+    <div class="btn-group" role="group">
+        <a href="{{ url('/register') }}">
+        <button type="button" class="btn btn-default">Change Email & Password </button>
+        </a>
+    </div>
+</div>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <div class="btn-group" role="group">
+        <a href="{{ url('/paperset') }}">
+        <button type="button" class="btn btn-default">Set A Paper</button>
+        </a>
+    </div>
+    <div class="btn-group" role="group">
+        <a href="{{ url('/papermodify') }}">
+        <button type="button" class="btn btn-default">Modify A Paper</button>
+        </a>
+    </div>
+    <div class="btn-group" role="group">
+        <a href="{{ url('/paperdelete') }}">
+        <button type="button" class="btn btn-default">Delete A Paper</button>
+        </a>
+    </div>
+</div>
 @endsection
