@@ -10,13 +10,13 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            <span class="glyphicon glyphicon-bookmark"></span> This Is Delete Subject </h3>
+                            <span class="glyphicon glyphicon-bookmark"></span> This Is Search & Modify Essay Question</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <form class="form-horizontal" role="form" method="POST" action="{{ url('deletesubject') }}">
+    <form class="form-horizontal" role="form" method="POST" action="{{ url('modifyessayquestion') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
             <label for="email" class="col-md-4 control-label">Question Bank E-Mail Address</label>
@@ -41,7 +41,7 @@
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-btn fa-user"></i> Delete Question
+                    <i class="fa fa-btn fa-user"></i> Search Essay Question
                 </button>
             </div>
         </div>

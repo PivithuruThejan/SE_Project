@@ -44,6 +44,10 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
+        'questionbank' => [
+            'driver' => 'session',
+            'provider' => 'questionbanks',
+        ],
 
         'api' => [
             'driver' => 'token',
@@ -77,6 +81,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
         ],
+        'questionbanks' => [
+            'driver' => 'eloquent',
+            'model' => App\questionbank::class,
+        ],
 
         // 'users' => [
         //     'driver' => 'database',
@@ -106,6 +114,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'email' => 'auth.emails.password',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'questionbanks' => [
+            'provider' => 'questionbanks',
             'email' => 'auth.emails.password',
             'table' => 'password_resets',
             'expire' => 60,

@@ -51,6 +51,8 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'admin' => \App\Http\Middleware\RedirectIfNotAdmin::class,
+        'questionbank' => \App\Http\Middleware\RedirectIfNotQuestionBank::class,
         'revalidate' => \App\Http\Middleware\RevalidateBackHistory::class,
+        'prevent-back-history' => \App\Http\Middleware\PreventBackHistory::class,
     ];
 }

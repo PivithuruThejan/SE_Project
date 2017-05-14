@@ -1,7 +1,7 @@
 @if($errors->any())
     <h4>{{$errors->first()}}</h4>
 @endif
-@extends('layouts.app')
+@extends('layouts.questionbankapp')
 
 @section('content')
     <div class="container">
@@ -10,16 +10,17 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            <span class="glyphicon glyphicon-bookmark"></span>This Is Paper Set</h3>
+                            <span class="glyphicon glyphicon-bookmark"></span> This Is Insert MCQ Question</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <form class="form-horizontal" role="form" method="POST" action="{{ url('setpaper') }}">
+
+    <form class="form-horizontal" role="form" method="POST" action="{{ url('insertmcqquestion') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <label for="email" class="col-md-4 control-label">User E-Mail Address</label>
+            <label for="email" class="col-md-4 control-label">Question Bank E-Mail Address</label>
 
             <div class="col-md-6">
                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -31,14 +32,25 @@
                 @endif
             </div>
         </div>
-
         <div class="form-group">
-            <label for="deadline" class="col-md-4 control-label">Deadline :</label>
+            <label for="subject_name" class="col-md-4 control-label">Subject Name:</label>
             <div class="col-md-6">
-                <input id="deadline" type="datetime-local" class="form-control" name="deadline" required>
+                <input id="subject_name" type="text" class="form-control" name="subject_name" required>
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="question" class="col-md-4 control-label">Question:</label>
+            <div class="col-md-6">
+                <input id="question" type="text" class="form-control" name="question" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="marks" class="col-md-4 control-label">Marks:</label>
+            <div class="col-md-6">
+                <input id="marks" type="number" class="form-control" name="marks" required>
+            </div>
+        </div>
         <div class="form-group">
             <label for="levelofhardness" class="col-md-4 control-label">Level Of Hardness</label>
             <div class="col-md-6">
@@ -49,63 +61,54 @@
                 </select>
             </div>
         </div>
-
         <div class="form-group">
-            <label for="mcqno" class="col-md-4 control-label">No Of MCQ Questions:</label>
+            <label for="section" class="col-md-4 control-label">Section:</label>
             <div class="col-md-6">
-                <input id="mcqno" type="number" class="form-control" name="mcqno" required>
+                <input id="section" type="number" class="form-control" name="section" required>
             </div>
         </div>
-
         <div class="form-group">
-            <label for="essayno" class="col-md-4 control-label">No Of Essay Questions:</label>
+            <label for="section" class="col-md-4 control-label">Correct Answer:</label>
             <div class="col-md-6">
-                <input id="essayno" type="number" class="form-control" name="essayno" required>
+                <input id="answer" type="text" class="form-control" name="answer" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="ssection" class="col-md-4 control-label">Start Section:</label>
+            <label for="section" class="col-md-4 control-label">Other Answer 2:</label>
             <div class="col-md-6">
-                <input id="ssection" type="number" class="form-control" name="ssection" required>
+                <input id="answer2" type="text" class="form-control" name="answer2" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="esection" class="col-md-4 control-label">End  Section:</label>
+            <label for="section" class="col-md-4 control-label">Other Answer 3:</label>
             <div class="col-md-6">
-                <input id="esection" type="number" class="form-control" name="esection" required>
+                <input id="answer3" type="text" class="form-control" name="answer3" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="subject_name" class="col-md-4 control-label">Subject Name:</label>
+            <label for="section" class="col-md-4 control-label">Other Answer 4:</label>
             <div class="col-md-6">
-                <input id="subject_name" type="text" class="form-control" name="subject_name" required>
+                <input id="answer4" type="text" class="form-control" name="answer4" required>
             </div>
         </div>
 
-        <div class="form-group{{ $errors->has('remail') ? ' has-error' : '' }}">
-            <label for="email" class="col-md-4 control-label">Receiver E-Mail Address</label>
-
-            <div class="col-md-6">
-                <input id="remail" type="email" class="form-control" name="remail" value="{{ old('email') }}" required>
-
-                @if ($errors->has('remail'))
-                    <span class="help-block">
-                                        <strong>{{ $errors->first('remail') }}</strong>
-                                    </span>
-                @endif
-            </div>
-        </div>
 
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-btn fa-user"></i> Set Paper
+                    <i class="fa fa-btn fa-user"></i> Insert MCQ Question
                 </button>
             </div>
         </div>
+
+
+
+
+
+
 
     </form>
 

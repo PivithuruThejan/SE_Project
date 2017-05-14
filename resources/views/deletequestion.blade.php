@@ -1,38 +1,57 @@
-@extends('layouts.app')
+@if($errors->any())
+    <h4>{{$errors->first()}}</h4>
+@endif
+@extends('layouts.questionbankapp')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Welcome</div>
-
-                    <div class="panel-body">
-                        This is Delete A Question.
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-bookmark"></span> This Is Delete Question </h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-xs-4">
+    <form class="form-horizontal" role="form" method="POST" action="{{ url('deletequestion') }}">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+            <label for="email" class="col-md-4 control-label">Question Bank E-Mail Address</label>
+
+            <div class="col-md-6">
+                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+
+                @if ($errors->has('email'))
+                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                @endif
+            </div>
+        </div>
         <div class="form-group">
-            <label for="usr">Type:</label>
-            <input type="text" class="form-control" id="usr">
+            <label for="subject_name" class="col-md-4 control-label">Question ID:</label>
+            <div class="col-md-6">
+                <input id="id" type="number" class="form-control" name="id" required>
+            </div>
         </div>
-    </div>
-    <div class="col-xs-4">
+
         <div class="form-group">
-            <label for="usr">Question No:</label>
-            <input type="text" class="form-control" id="usr">
-        </div>
-    </div>
-
-
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Delete The Question</button>
+            <div class="col-md-6 col-md-offset-4">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-btn fa-user"></i> Delete Question
+                </button>
+            </div>
         </div>
 
-    </div>
+
+
+
+
+
+
+    </form>
 
 @endsection
