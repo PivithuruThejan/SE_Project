@@ -56,7 +56,7 @@
         </div>
         <div class="btn-group" role="group">
             <a href="{{ url('/paperbuild') }}">
-                <button type="button"  class="btn btn-info btn-lg">Build A Paper</button>
+                <button type="button"  class="btn btn-info btn-lg" >Build A Paper</button>
             </a>
         </div>
         <div class="btn-group" role="group">
@@ -65,6 +65,8 @@
             </a>
         </div>
     </div>
+
+
     <div class="alert alert-info">
         <strong></strong>
     </div>
