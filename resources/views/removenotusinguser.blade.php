@@ -37,7 +37,7 @@
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-btn fa-user"></i> Remove User
+                    <i class="fa fa-trash-o"></i> Remove User
                 </button>
             </div>
         </div>

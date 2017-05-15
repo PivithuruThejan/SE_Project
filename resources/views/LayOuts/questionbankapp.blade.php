@@ -24,6 +24,11 @@
         .fa-btn {
             margin-right: 6px;
         }
+        .paddingButton{
+            padding: 40px;
+            margin: 10px;
+            width: 95% !important;
+        }
     </style>
 </head>
 <body id="app-layout">

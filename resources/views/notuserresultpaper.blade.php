@@ -43,7 +43,7 @@
         <div class="col-md-6 col-md-offset-4">
             <a href="{{ url('/adminhome') }}">
                 <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-btn fa-user"></i> Exit
+                    <i class="fa fa-backward"></i> Exit
                 </button>
             </a>
 

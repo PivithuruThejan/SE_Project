@@ -59,13 +59,13 @@
         <div class="col-md-6 col-md-offset-4">
             <a href="{{ url('/questionbank') }}">
             <button type="submit" class="btn btn-primary">
-                <i class="fa fa-btn fa-user"></i> Exit
+                <i class="fa fa-backward" ></i> Exit
             </button>
             </a>
 
             <a href="{{ url('/modifyessayquestion') }}">
                 <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-btn fa-user"></i> Modify
+                    <i class="fa fa-scissors"></i> Modify
                 </button>
             </a>
         </div>

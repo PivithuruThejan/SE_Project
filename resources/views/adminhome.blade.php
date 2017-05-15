@@ -20,44 +20,21 @@
 
         <div class="btn-group" role="group" >
             <a href="{{ url('changeadminemailpassword') }}">
-            <button type="button" class="btn btn-info btn-lg">Change Email & Password</button>
+            <button type="button" class="btn btn-info btn-lg paddingButton"> <span class="glyphicon glyphicon-pencil"></span>Change Email & Password</button>
             </a>
         </div>
 
         <div class="btn-group" role="group">
             <a href="{{ url('/removenotusingusers') }}">
-            <button type="button" class="btn btn-info btn-lg">Remove Users</button>
+            <button type="button" class="btn btn-info btn-lg paddingButton"><span class="glyphicon glyphicon-remove"></span>Remove Users</button>
             </a>
         </div>
         <div class="btn-group" role="group">
             <a href="{{ url('/viewnotusing') }}">
-            <button type="button" class="btn btn-info btn-lg">View System Not Using Users </button>
+            <button type="button" class="btn btn-info btn-lg paddingButton"> <span class="glyphicon glyphicon-eye-open"></span>View System Not Using Users </button>
             </a>
         </div>
 
     </div>
-    <div class="alert alert-info">
-        <strong></strong>
-    </div>
-    <div class="alert alert-info">
-        <strong></strong>
-    </div>
-    <div class="alert alert-info">
-        <strong></strong>
-    </div>
-    <div class="alert alert-info">
-        <strong></strong>
-    </div>
-    <div class="alert alert-info">
-        <strong></strong>
-    </div>
-    <div class="alert alert-info">
-        <strong></strong>
-    </div>
-    <div class="alert alert-info">
-        <strong></strong>
-    </div>
-    <div class="alert alert-info">
-        <strong></strong>
-    </div>
+
 @endsection
