@@ -24,7 +24,7 @@ class AuthController extends Controller
     protected $guard = 'questionbank';
 
     public function showLoginForm()
-    {
+    {//show login form for question bank
         if (Auth::guard('questionbank')->check())
         {
             return redirect('/questionbank');
@@ -34,7 +34,7 @@ class AuthController extends Controller
     }
 
     public function showRegistrationForm()
-    {
+    {//show registration form for question bank
         if($this->getqblogin()=='log'){
 
         return redirect('/questionbank');
@@ -70,7 +70,7 @@ class AuthController extends Controller
 
 
 
-    public function logout(){
+    public function logout(){//function for question bank logout
         $this->setqblogout();
         Auth::guard('questionbank')->logout();
         return redirect('/');
